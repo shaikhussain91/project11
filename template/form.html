@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(127deg, #4d3f83, #343b36, #39784e);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        fieldset {
+            width: 40%;
+            border: 2px solid #0066cc;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+        }
+        legend {
+            font-size: 28px;
+            color: #0066cc;
+            text-align: center;
+            font-weight: bold;
+            border: 2px dashed #39784e;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+        td {
+            padding: 5px 0;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="number"],
+        textarea {
+            width: calc(100% - 10px);
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        textarea {
+            resize: none;
+            height: 60px;
+        }
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+        .required {
+            color: red;
+            font-size: 12px;
+            margin-left: 3px;
+        }
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration Form</legend>
+        <form>
+            <table>
+                <tr>
+                    <td><b>Student Name</b> <span class="required">*</span></td>
+                    <td><input type="text" required placeholder="Enter your name" minlength="3" maxlength="20"></td>
+                </tr>
+                <tr>
+                    <td><b>Email ID</b> <span class="required">*</span></td>
+                    <td><input type="email" required placeholder="Enter your email"></td>
+                </tr>
+                <tr>
+                    <td><b>Date of Birth</b> <span class="required">*</span></td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td><b>Mobile Number</b> <span class="required">*</span></td>
+                    <td><input type="tel" required placeholder="Enter your number" pattern="[0-9]{10}"></td>
+                </tr>
+                <tr>
+                    <td><b>Age</b> <span class="required">*</span></td>
+                    <td><input type="number" required placeholder="Enter your age" min="18" max="30"></td>
+                </tr>
+                <tr>
+                    <td><b>Gender</b> <span class="required">*</span></td>
+                    <td class="radio-group">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Select Course</b> <span class="required">*</span></td>
+                    <td class="radio-group">
+                        <input type="radio" name="course" id="python">
+                        <label for="python">Python</label>
+                        <input type="radio" name="course" id="java">
+                        <label for="java">Java</label>
+                        <input type="radio" name="course" id="web">
+                        <label for="web">Web Tech</label>
+                        <input type="radio" name="course" id="sql">
+                        <label for="sql">SQL</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Address</b> <span class="required">*</span></td>
+                    <td><textarea required placeholder="Enter your address"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
